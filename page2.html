@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utilities.css">
+</head>
+<body onresize="myFunction()">
+
+      <!-- Navbar -->
+      <div class="navbar bg-secondary">
+        <div class="container flex">
+            <h1>NATURE</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="page2.html">Events</a></li>
+                    <li><a href="../html/login.html" class="bg-dark" id="login">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+     <!--on mouseover and on mouseout-->
+     <h2>The onmouseover and onmouseout Event</h2>
+
+     <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="pic1.jpg" alt="Smiley" width="32" height="32">
+ 
+     <p>Try to resize the browser window to display the windows height and width.</p>
+
+     <p id="demo2"></p>
+
+     <p>Select a new car from the list.</p>
+
+<select id="mySelect" onchange="myFunction()">
+  <option value="Audi">Audi</option>
+  <option value="BMW">BMW</option>
+  <option value="Mercedes">Mercedes</option>
+  <option value="Volvo">Volvo</option>
+</select>
+
+<p>When you select a new car, a function is triggered which outputs the value of the selected car.</p>
+
+<h1>HTML DOM Events</h1>
+<h2>The ondblclick Event</h2>
+
+<p ondblclick="myFunction2()">Double-click this paragraph to trigger a function.</p>
+
+<p id="demo"></p>
+
+<p id="demo"></p>
+
+<h1>HTML DOM Events</h1>
+<h2>The focusout Event</h2>
+
+Enter your name: <input type="text" id="fname" onfocusout="myFunction()">
+
+<p>When you leave the input field, a function transforms the input text to upper case.</p>
+<h2>The blur Event</h2>
+
+Enter your name: <input type="text" id="fname" onblur="myFunction()">
+
+<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+
+<script>
+function myFunction() {
+  let x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+</script>
+
+
+     <script>
+     function bigImg(x) {
+     x.style.height = "450px";
+     x.style.width = "450px";     
+     }
+ 
+     function normalImg(x) {
+     x.style.height = "200px";
+     x.style.width = "200px";
+     }
+     </script>
+     <script>
+        function myFunction() {
+          let w = window.outerWidth;
+          let h = window.outerHeight;
+          let txt = "Window size: width=" + w + ", height=" + h;
+          document.getElementById("demo").innerHTML = txt;
+        }
+        </script>
+        <script>
+            function myFunction() {
+              var x = document.getElementById("mySelect").value;
+              document.getElementById("demo").innerHTML = "You selected: " + x;
+            }
+            </script>
+
+<script>
+    function myFunction2() {
+      document.getElementById("demo2").innerHTML += "Hello World ";
+    }
+    </script>
+    
+    <script>
+        function myFunction() {
+          let x = document.getElementById("fname");
+          x.value = x.value.toUpperCase();
+        }
+        </script>
+    </body>
+    </html>

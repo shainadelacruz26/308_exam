@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utilities.css">
+
+</head>
+<body class="bg-body">
+
+    <!-- Navbar -->
+    <div class="navbar bg-secondary">
+        <div class="container flex">
+            <h1>NATURE</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="page2.html">Events</a></li>
+                    <li><a href="../html/login.html" class="bg-dark" id="login">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!--Gallery-->
+    <section>
+    <div class="box">
+       
+    
+        <div class="box-img grid grid-3">
+     
+           <div class="image">
+            <img id="myImage" src="pic1.jpg" alt="An example image">
+            <button id="changeImageBtn">Change Image Source</button>
+           </div>
+     
+           <div class="image">
+            <img id="myImage2" src="pic3.jpg" alt="An example image">
+            <button id="changeImageBtn2">Change Image Source</button>
+           </div>
+     
+           <div class="image">
+            <img id="myImage3" src="pic5.jpg" alt="An example image">
+            <button id="changeImageBtn3">Change Image Source</button>
+           </div>
+     
+           
+           
+     
+          
+        </div>
+     </div>
+    </section>
+
+
+ 
+
+
+    <script>
+        const imageElement = document.getElementById('myImage');
+        const buttonElement = document.getElementById('changeImageBtn');
+      
+
+        // Add a click event listener to the button
+    buttonElement.addEventListener('click', function() {
+    // Change the image source and alt attribute
+    imageElement.src = 'pic2.jpg';
+    imageElement.alt = 'Adifferent image';
+    // Change the button text
+    buttonElement.textContent= 'Image Changed!';
+    });
+
+    const imageElement2 = document.getElementById('myImage2');
+    const buttonElement2 = document.getElementById('changeImageBtn2');
+      
+
+        // Add a click event listener to the button
+    buttonElement.addEventListener('click', function() {
+    // Change the image source and alt attribute
+    imageElement2.src = 'pic4.jpg';
+    imageElement2.alt = 'Adifferent image';
+    // Change the button text
+    buttonElement2.textContent= 'Image Changed!';
+    });
+
+    const imageElement3 = document.getElementById('myImage3');
+    const buttonElement3 = document.getElementById('changeImageBtn3');
+      
+
+        // Add a click event listener to the button
+    buttonElement.addEventListener('click', function() {
+    // Change the image source and alt attribute
+    imageElement3.src = 'pic6.jpg';
+    imageElement3.alt = 'Adifferent image';
+    // Change the button text
+    buttonElement3.textContent= 'Image Changed!';
+    });
+
+
+   
+    </script>
+    
+
+
+</body>
+</html>
